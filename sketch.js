@@ -1,3 +1,5 @@
+
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -7,7 +9,7 @@ var engine, world;
 var box1, pig1,pig3;
 var backgroundImg,platform;
 var bird, slingshot;
-
+var score =0
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -65,7 +67,10 @@ function draw(){
     bird.display();
     platform.display();
     //log6.display();
-    slingshot.display();    
+    slingshot.display();  
+    pig1.score();
+    pig3.score();
+    text ("score:"+score,100,10)  
 }
 
 function mouseDragged(){
